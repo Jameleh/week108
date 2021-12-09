@@ -19,6 +19,6 @@ export default (express, bodyParser, createReadStream, crypto, http, CORS, write
     .all('/wordpress/wp-json/wp/v2/posts/', r=>{
         r.res.set(wpH).send([wp])
     })
-    
+    .app.set('view engine','pug');
     return app;
 }
